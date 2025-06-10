@@ -32,7 +32,6 @@
       <Folder Include="IAM\" />
       <Folder Include="Profiles\Application\Internal\CommandServices\" />
       <Folder Include="Profiles\Application\Internal\QueryServices\" />
-      <Folder Include="Profiles\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="Profiles\Interfaces\REST\Resources\" />
       <Folder Include="Profiles\Interfaces\REST\Transform\" />
       <Folder Include="Publishing\" />
