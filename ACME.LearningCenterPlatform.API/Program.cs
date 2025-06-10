@@ -7,7 +7,6 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 
-
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
@@ -26,6 +25,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     else if (builder.Environment.IsProduction())
         options.UseMySQL(connectionString)
             .LogTo(Console.WriteLine, LogLevel.Error);
+});
+
+// Add CORS Policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllPolicy",
+        policy => policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -106,6 +114,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Apply CORS Policy
+app.UseCors("AllowAllPolicy");
 
 app.UseHttpsRedirection();
 
