@@ -1,3 +1,7 @@
+using ACME.LearningCenterPlatform.API.Profiles.Application.Internal.QueryServices;
+using ACME.LearningCenterPlatform.API.Profiles.Domain.Repositories;
+using ACME.LearningCenterPlatform.API.Profiles.Domain.Services;
+using ACME.LearningCenterPlatform.API.Profiles.Infrastructure.Persistence.EFC.Repositories;
 using ACME.LearningCenterPlatform.API.Shared.Domain.Repositories;
 using ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -93,6 +97,8 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Profiles context
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProfileQueryService, ProfileQueryService>();
 
 // Publishing context
 
