@@ -28,4 +28,10 @@
         <PackageReference Include="Swashbukle.AspNetCore" Version="2.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="IAM\" />
+      <Folder Include="Profiles\" />
+      <Folder Include="Publishing\" />
+    </ItemGroup>
+
 </Project>
