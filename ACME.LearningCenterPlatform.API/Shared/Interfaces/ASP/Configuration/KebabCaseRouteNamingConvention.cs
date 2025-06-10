@@ -1,5 +1,4 @@
 using ACME.LearningCenterPlatform.API.Shared.Interfaces.ASP.Configuration.Extensions;
-using CatchUpPlatform.API.Shared.Interfaces.ASP.Configuration.Extensions;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
 namespace ACME.LearningCenterPlatform.API.Shared.Interfaces.ASP.Configuration;

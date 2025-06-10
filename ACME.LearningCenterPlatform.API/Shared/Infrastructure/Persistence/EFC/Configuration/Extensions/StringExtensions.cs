@@ -1,3 +1,5 @@
+using Humanizer;
+
 namespace ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 /// <summary>
