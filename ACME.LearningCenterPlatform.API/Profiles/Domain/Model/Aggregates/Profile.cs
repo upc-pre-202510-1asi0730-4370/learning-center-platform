@@ -1,3 +1,4 @@
+using ACME.LearningCenterPlatform.API.Profiles.Domain.Model.Commands;
 using ACME.LearningCenterPlatform.API.Profiles.Domain.Model.ValueObjects;
 
 namespace ACME.LearningCenterPlatform.API.Profiles.Domain.Model.Aggregates;
@@ -18,5 +19,18 @@ public partial class Profile
         Name = new PersonName();
         Email = new EmailAddress();
         Address = new StreetAddress();
+    }
+
+    public Profile(CreateProfileCommand command)
+    {
+        Name = new PersonName(command.FirstName, command.LastName);
+        Email = new EmailAddress(command.Email);
+        Address = new StreetAddress(
+            command.Street,
+            command.Number,
+            command.City,
+            command.PostalCode,
+            command.Country
+        );
     }
 }
