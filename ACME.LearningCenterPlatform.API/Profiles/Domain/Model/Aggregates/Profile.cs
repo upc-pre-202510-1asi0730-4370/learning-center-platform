@@ -1,4 +1,5 @@
 using ACME.LearningCenterPlatform.API.Profiles.Domain.Model.Commands;
+using ACME.LearningCenterPlatform.API.Profiles.Domain.Model.Entities;
 using ACME.LearningCenterPlatform.API.Profiles.Domain.Model.ValueObjects;
 
 namespace ACME.LearningCenterPlatform.API.Profiles.Domain.Model.Aggregates;
@@ -33,4 +34,7 @@ public partial class Profile
             command.Country
         );
     }
+    
+    public List<Order> Orders { get; set; }
+    
 }
