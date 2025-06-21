@@ -4,6 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,6 +23,7 @@
 
         <!-- Mysql Entity Framework Core related packages -->
         <PackageReference Include="MySql.EntityFrameworkCore" Version="9.0.3" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="8.1.4" />
 
         <!-- Swagger related packages -->
@@ -36,6 +38,12 @@
       <Folder Include="IAM\" />
       <Folder Include="Publishing\Domain\Services\" />
       <Folder Include="Publishing\Interfaces\REST\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
