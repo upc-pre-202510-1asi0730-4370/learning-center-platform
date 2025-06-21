@@ -20,4 +20,8 @@ RUN dotnet publish "./ACME.LearningCenterPlatform.API.csproj" -c $BUILD_CONFIGUR
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+# Setea el entorno como Development
+ENV ASPNETCORE_ENVIRONMENT=Development
+
 ENTRYPOINT ["dotnet", "ACME.LearningCenterPlatform.API.dll"]
