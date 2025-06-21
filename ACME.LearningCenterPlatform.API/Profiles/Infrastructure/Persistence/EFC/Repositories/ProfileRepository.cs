@@ -6,10 +6,18 @@ using ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Repo
 
 namespace ACME.LearningCenterPlatform.API.Profiles.Infrastructure.Persistence.EFC.Repositories;
 
-public class ProfileRepository(AppDbContext context) : BaseRepository<Profile>(context), IProfileRepository
+/// <summary>
+/// Profile repository implementation  
+/// </summary>
+/// <param name="context">
+/// The database context
+/// </param>
+public class ProfileRepository(AppDbContext context) 
+    : BaseRepository<Profile>(context), IProfileRepository
 {
+    /// <inheritdoc />
     public async Task<Profile?> FindProfileByEmailAsync(EmailAddress email)
     {
-       return Context.Set<Profile>().FirstOrDefault(p => p.Email == email);
+        return Context.Set<Profile>().FirstOrDefault(p => p.Email == email);
     }
 }

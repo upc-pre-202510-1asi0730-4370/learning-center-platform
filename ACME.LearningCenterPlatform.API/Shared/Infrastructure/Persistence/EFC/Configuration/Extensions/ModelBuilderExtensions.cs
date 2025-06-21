@@ -3,22 +3,16 @@ using Microsoft.EntityFrameworkCore;
 namespace ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 /// <summary>
-///     Model builder extensions
+///     Model builder extensions for the database context
 /// </summary>
-/// <remarks>
-///     This class contains extension methods for the model builder.
-///     It includes a method to use the snake case and/or plural naming convention according to an object type.
-///     It also pluralizes the table names.
-/// </remarks>
 public static class ModelBuilderExtensions
 {
     /// <summary>
-    ///     Use snake case naming convention
+    ///     Use snake case naming convention for the database context
     /// </summary>
-    /// <remarks>
-    ///     This method sets the naming convention for the database tables, columns, keys, foreign keys and indexes to snake
-    ///     case.
-    /// </remarks>
+    /// <param name="builder">
+    ///     The model builder for the database context
+    /// </param>
     public static void UseSnakeCaseNamingConvention(this ModelBuilder builder)
     {
         foreach (var entity in builder.Model.GetEntityTypes())

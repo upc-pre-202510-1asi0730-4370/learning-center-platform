@@ -4,16 +4,18 @@ using ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Conf
 namespace ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 
 /// <summary>
-///     Unit of work implementation
+///     Unit of work for the application.
 /// </summary>
 /// <remarks>
-///     This class implements the basic operations for a unit of work.
-///     It requires the context to be passed in the constructor.
+///     This class is used to save changes to the database context.
+///     It implements the IUnitOfWork interface.
 /// </remarks>
-/// <see cref="IUnitOfWork" />
+/// <param name="context">
+///     The database context for the application
+/// </param>
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
-    /// <inheritdoc />
+    // inheritedDoc
     public async Task CompleteAsync()
     {
         await context.SaveChangesAsync();

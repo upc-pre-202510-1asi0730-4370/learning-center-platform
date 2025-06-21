@@ -1,4 +1,4 @@
-using ACME.LearningCenterPlatform.API.Profiles.Interfaces.REST;
+using ACME.LearningCenterPlatform.API.Profiles.Interfaces.ACL;
 using ACME.LearningCenterPlatform.API.Publishing.Domain.Model.ValueObjects;
 
 namespace ACME.LearningCenterPlatform.API.Publishing.Application.Internal.OutboundServices.ACL;

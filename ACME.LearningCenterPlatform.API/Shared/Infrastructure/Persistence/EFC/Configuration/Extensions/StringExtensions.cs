@@ -3,19 +3,19 @@ using Humanizer;
 namespace ACME.LearningCenterPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 /// <summary>
-///     String extensions
+///     String extensions for the database context
 /// </summary>
-/// <remarks>
-///     This class contains extension methods for strings.
-///     It includes methods to convert strings to snake case and pluralize them.
-/// </remarks>
 public static class StringExtensions
 {
     /// <summary>
-    ///     Convert a string to snake case
+    ///     Convert the string to snake case
     /// </summary>
-    /// <param name="text">The string to convert</param>
-    /// <returns>The string converted to snake case</returns>
+    /// <param name="text">
+    ///     The text to convert to snake case
+    /// </param>
+    /// <returns>
+    ///     The snake cased text
+    /// </returns>
     public static string ToSnakeCase(this string text)
     {
         return new string(Convert(text.GetEnumerator()).ToArray());
@@ -40,10 +40,14 @@ public static class StringExtensions
     }
 
     /// <summary>
-    ///     Pluralize a string
+    ///     Convert the string to plural
     /// </summary>
-    /// <param name="text">The string to convert</param>
-    /// <returns>The string converted to plural</returns>
+    /// <param name="text">
+    ///     The text to convert to plural
+    /// </param>
+    /// <returns>
+    ///     The pluralized text
+    /// </returns>
     public static string ToPlural(this string text)
     {
         return text.Pluralize(false);
