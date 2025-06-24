@@ -20,7 +20,7 @@
 
         <!-- Naming convention conversion related packages -->
         <PackageReference Include="Humanizer" Version="2.14.1" />
-
+        
         <!-- Mysql Entity Framework Core related packages -->
         <PackageReference Include="MySql.EntityFrameworkCore" Version="9.0.3" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
@@ -31,11 +31,22 @@
 
         <!-- Mediator pattern related packages -->
         <PackageReference Include="Cortex.Mediator" Version="1.6.1"/>
-        
+
+        <!-- BCrypt Encription related packages -->
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+
+        <!-- JSON Web Token related packages -->
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.12.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.6" />
+
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="IAM\" />
+      <Folder Include="IAM\Application\" />
+      <Folder Include="IAM\Domain\" />
+      <Folder Include="IAM\Infrastructure\" />
+      <Folder Include="IAM\Interfaces\" />
       <Folder Include="Publishing\Domain\Services\" />
       <Folder Include="Publishing\Interfaces\REST\" />
     </ItemGroup>
