@@ -43,9 +43,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="IAM\Application\" />
-      <Folder Include="IAM\Domain\" />
-      <Folder Include="IAM\Infrastructure\" />
       <Folder Include="IAM\Interfaces\" />
       <Folder Include="Publishing\Domain\Services\" />
       <Folder Include="Publishing\Interfaces\REST\" />
