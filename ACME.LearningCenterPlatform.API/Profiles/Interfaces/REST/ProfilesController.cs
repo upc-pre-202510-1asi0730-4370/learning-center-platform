@@ -1,4 +1,5 @@
 using System.Net.Mime;
+using ACME.LearningCenterPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Attributes;
 using ACME.LearningCenterPlatform.API.Profiles.Domain.Model.Queries;
 using ACME.LearningCenterPlatform.API.Profiles.Domain.Services;
 using ACME.LearningCenterPlatform.API.Profiles.Interfaces.REST.Resources;
@@ -9,6 +10,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace ACME.LearningCenterPlatform.API.Profiles.Interfaces.REST;
 
 [ApiController]
+[Authorize]
 [Route("api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
 [SwaggerTag("Available Profile Endpoints.")]
