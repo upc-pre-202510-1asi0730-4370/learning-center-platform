@@ -1,6 +1,3 @@
 namespace ACME.LearningCenterPlatform.API.IAM.Domain.Model.Commands;
 
-public class SignUpCommand(string Username, string Password)
-{
-    
-}
+public record SignUpCommand(string Username, string Password);
