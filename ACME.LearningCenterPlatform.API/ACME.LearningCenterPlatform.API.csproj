@@ -43,7 +43,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="IAM\Interfaces\" />
+      <Folder Include="IAM\Interfaces\ACL\" />
       <Folder Include="Publishing\Domain\Services\" />
       <Folder Include="Publishing\Interfaces\REST\" />
     </ItemGroup>
