@@ -56,7 +56,7 @@ public class TokenService(IOptions<TokenSettings> tokenSettings) : ITokenService
                 ClockSkew = TimeSpan.Zero
             });
 
-            var jwtToken = tokenValidationResult.SecurityToken as JwtSecurityToken;
+            var jwtToken = tokenValidationResult.SecurityToken as JsonWebToken;
             var userId = int.Parse(jwtToken.Claims.First(c => c.Type == ClaimTypes.Sid).Value);
             return userId;
         }
