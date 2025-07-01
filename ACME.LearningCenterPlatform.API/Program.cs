@@ -1,5 +1,8 @@
+using ACME.LearningCenterPlatform.API.IAM.Application.Internal.CommandServices;
 using ACME.LearningCenterPlatform.API.IAM.Application.Internal.OutbountServices;
+using ACME.LearningCenterPlatform.API.IAM.Application.Internal.QueryServices;
 using ACME.LearningCenterPlatform.API.IAM.Domain.Repositories;
+using ACME.LearningCenterPlatform.API.IAM.Domain.Services;
 using ACME.LearningCenterPlatform.API.IAM.Infrastructure.Hashing.BCrypt.Services;
 using ACME.LearningCenterPlatform.API.IAM.Infrastructure.Persistence.EFC.Repositories;
 using ACME.LearningCenterPlatform.API.IAM.Infrastructure.Pipeline.Middleware.Extensions;
@@ -130,6 +133,8 @@ builder.Services.AddScoped<IProfileQueryService, ProfileQueryService>();
 builder.Services.Configure<TokenSettings>(builder.Configuration.GetSection("TokenSettings"));
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserCommandService, UserCommandService>();
+builder.Services.AddScoped<IUserQueryService, UserQueryService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IHashingService, HashingService>();
 
